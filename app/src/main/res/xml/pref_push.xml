@@ -20,7 +20,7 @@
     <PreferenceCategory android:title="@string/video_settings">
 
         <ListPreference
-            android:defaultValue="0"
+            android:defaultValue="1"
             android:entries="@array/camera_postion_list_titles"
             android:entryValues="@array/camera_postion_list_values"
             android:key="camera_postion"
@@ -51,7 +51,7 @@
             android:title="@string/video_front_mirror" />
 
         <ListPreference
-            android:defaultValue="1"
+            android:defaultValue="3"
             android:entries="@array/video_resolution_list_titles"
             android:entryValues="@array/video_resolution_list_values"
             android:key="video_resolution"
@@ -60,7 +60,7 @@
             android:title="@string/video_resolution" />
 
         <ListPreference
-            android:defaultValue="0"
+            android:defaultValue="1"
             android:entries="@array/video_profile_list_titles"
             android:entryValues="@array/video_profile_list_values"
             android:key="video_profile"
@@ -69,7 +69,7 @@
             android:title="@string/video_profile" />
 
         <ListPreference
-            android:defaultValue="1"
+            android:defaultValue="2"
             android:entries="@array/video_keyframe_interval_list_titles"
             android:entryValues="@array/video_keyframe_interval_list_values"
             android:key="video_keyframe_interval"
@@ -78,7 +78,7 @@
             android:title="@string/video_keyframe_interval" />
 
         <ListPreference
-            android:defaultValue="500000"
+            android:defaultValue="1000000"
             android:entries="@array/video_bitrate_list_titles"
             android:entryValues="@array/video_bitrate_list_values"
             android:key="video_bitrate"
@@ -87,7 +87,7 @@
             android:title="@string/video_bitrate" />
 
         <ListPreference
-            android:defaultValue="15"
+            android:defaultValue="30"
             android:entries="@array/video_fps_list_titles"
             android:entryValues="@array/video_fps_list_values"
             android:key="video_fps"
@@ -108,7 +108,7 @@
             android:title="@string/audio_profile" />
 
         <ListPreference
-            android:defaultValue="32000"
+            android:defaultValue="64000"
             android:entries="@array/audio_bitrate_list_titles"
             android:entryValues="@array/audio_bitrate_list_values"
             android:key="audio_bitrate"
@@ -117,7 +117,7 @@
             android:title="@string/audio_bitrate" />
 
         <ListPreference
-            android:defaultValue="44100"
+            android:defaultValue="48000"
             android:entries="@array/audio_samplerate_list_titles"
             android:entryValues="@array/audio_samplerate_list_values"
             android:key="audio_samplerate"
