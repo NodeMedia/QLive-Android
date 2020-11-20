@@ -134,11 +134,11 @@
             android:summary="@null"
             android:title="@string/audio_denoise" />
 
-        <!--<SwitchPreference-->
-            <!--android:defaultValue="true"-->
-            <!--android:key="auto_hardware_acceleration"-->
-            <!--android:summary="@null"-->
-            <!--android:title="@string/auto_hardware_acceleration" />-->
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="auto_hardware_acceleration"
+            android:summary="@null"
+            android:title="@string/auto_hardware_acceleration" />
 
         <ListPreference
             android:defaultValue="0"

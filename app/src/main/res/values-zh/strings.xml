@@ -85,11 +85,13 @@
         <item>H.264 Baseline</item>
         <item>H.264 Main</item>
         <item>H.264 High</item>
+        <item>H.265 Main</item>
     </string-array>
     <string-array name="video_profile_list_values">
         <item>0</item>
         <item>1</item>
         <item>2</item>
+        <item>3</item>
     </string-array>
 
     <string name="video_keyframe_interval">视频关键帧间隔</string>
