@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/common_rect_match">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/common_rect_horizontal"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:subtitleTextAppearance="@style/SubtitleTitleTextStyle"
+        app:theme="@style/ToolBarStyle"
+        app:titleTextAppearance="@style/TitleTextStyle">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TitleTextStyle" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/content"
+        style="@style/common_rect_match"
+        android:layout_marginTop="?attr/actionBarSize" />
+</RelativeLayout>
+

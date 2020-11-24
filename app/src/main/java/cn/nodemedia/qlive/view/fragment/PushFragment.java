@@ -9,14 +9,12 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.SwitchPreference;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 
 import cn.nodemedia.qlive.R;
 import cn.nodemedia.qlive.view.PushActivity;
 import xyz.tanwb.airship.utils.Log;
-
-import static android.content.Context.MODE_WORLD_READABLE;
 
 public class PushFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 

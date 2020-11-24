@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Color -->
+    <!-- StatusBar Color -->
+    <color name="colorPrimaryDark">#303F9F</color>
+    <!-- Theme Color -->
+    <color name="colorPrimary">#3F51B5</color>
+    <!-- ToolBar Title Text Color -->
+    <color name="textColorPrimary">#FFFFFF</color>
+    <!-- ToolBar Subtitle Text Color -->
+    <color name="subtitleTextColor">#999999</color>
+    <!-- System View Default Color -->
+    <color name="colorControlNormal">#BBBBBB</color>
+    <!-- System View Select Color -->
+    <color name="colorAccent">#FF4080</color>
+    <!-- Window Background Color -->
+    <color name="windowBackground">#FFFFFF</color>
+    <!-- Navigation Background Color -->
+    <color name="navigationBarColor">#000000</color>
+    <!-- Popup Background Color -->
+    <color name="popupBackground">#FFFFFF</color>
+    <!-- Popup Text Color -->
+    <color name="popupTextColor">#3F51B5</color>
+    <!-- Dialog Background Color -->
+    <color name="dialogBackground">#FFFFFF</color>
+
+    <!-- App Theme Color Dark -->
+    <color name="colorThemeDark">#303F9F</color>
+    <!-- App Theme Color -->
+    <color name="colorTheme">#3F51B5</color>
+    <!-- App Light Color -->
+    <color name="colorLight">#FFFFFF</color>
+    <!-- App Gray Color -->
+    <color name="colorGray">#999999</color>
+    <!-- App Dark Color -->
+    <color name="colorDark">#333333</color>
+    <!-- App Hint Text Color -->
+    <color name="colorHint">#777777</color>
+    <!-- Line Divider Color -->
+    <color name="colorLineDivider">#FAFAFA</color>
+
+    <!-- styles -->
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--状态栏底色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--ActionBar底色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--各控制元件的预设颜色(基本不使用)-->
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <!--各控制元件(如：check box、switch 或是 radoi) 被勾选 (checked) 或是选定 (selected) 的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--toolbar标题文字颜色-->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!--ActionBar副标题颜色-->
+        <item name="subtitleTextColor">@color/subtitleTextColor</item>
+        <!--Menu菜单样式-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <!--App的背景色-->
+        <!--<item name="android:windowBackground">@color/windowBackground</item>-->
+        <!--底部导航栏的背景色，适用于 API Level 21 (Android 5) 以上的版本 res/values-v21/styles.xml -->
+        <!--<item name="android:navigationBarColor">@color/navigationBarColor</item>-->
+        <!--防止正式版时启动短暂白屏-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
+    <!--弹出菜单样式 -->
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <!--弹出菜单是否和ActionBar重合-->
+        <item name="overlapAnchor">false</item>
+        <!--弹出菜单背景色为标题栏的背景色-->
+        <!--<item name="android:popupBackground">?attr/colorPrimary</item>-->
+        <!--弹出菜单与标题栏的垂直间距-->
+        <item name="android:dropDownVerticalOffset">4dp</item>
+        <!--弹出菜单与标题栏的水平间距-->
+        <item name="android:dropDownHorizontalOffset">-2dp</item>
+    </style>
+
+    <!-- Toolbar 样式 -->
+    <style name="ToolBarStyle" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@color/textColorPrimary</item>
+        <item name="android:textSize">@dimen/menuTextDimen</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <!-- Toolbar Popup样式 -->
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">@color/popupBackground</item>
+        <!--弹出菜单OptionMenu文字的颜色-->
+        <item name="android:textColor">@color/popupTextColor</item>
+        <!--弹出菜单OptionMenu文字的大小-->
+        <item name="android:textSize">@dimen/popupTextDimen</item>
+    </style>
+
+    <!-- Toolbar Title样式 -->
+    <style name="TitleTextStyle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:maxWidth">@dimen/dp_196</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textSize">@dimen/textDimenPrimary</item>
+    </style>
+
+    <!-- Toolbar 副标题样式 -->
+    <style name="SubtitleTitleTextStyle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">@dimen/dp_196</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textColor">@color/subtitleTextColor</item>
+        <item name="android:textSize">@dimen/subtitleTextDimen</item>
+    </style>
+
+    <style name="common_rect_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="common_rect_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="common_rect_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="common_rect_vertical">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="common_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_05</item>
+        <item name="android:background">@color/colorLineDivider</item>
+    </style>
+
+    <style name="common_line_veritical">
+        <item name="android:layout_width">@dimen/dp_05</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorLineDivider</item>
+    </style>
+
+    <style name="common_listview" parent="common_rect_match">
+        <!-- 阻止list项变黑色 -->
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <!-- 设置list项点击颜色 -->
+        <item name="android:listSelector">@android:color/transparent</item>
+        <!-- 设置list项 上边和下边无黑色的阴影 -->
+        <item name="android:fadingEdge">none</item>
+        <!-- 设置滚动条的自动隐藏和显示 -->
+        <item name="android:fadeScrollbars">false</item>
+        <!-- 设置滚动条的隐藏 -->
+        <item name="android:scrollbars">none</item>
+        <!-- 设置滚动到底部模式 -->
+        <!--<item name="android:overScrollMode">never</item>-->
+        <!--List分割线-->
+        <item name="android:divider">@color/colorLineDivider</item>
+        <!--List分割线高度-->
+        <item name="android:dividerHeight">@dimen/dp_05</item>
+    </style>
+
+    <style name="common_textview" parent="common_rect_wrap">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="common_edittext" parent="common_rect_horizontal">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+    </style>
+
+    <style name="common_imageview" parent="common_rect_wrap">
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="common_button" parent="common_rect_horizontal">
+        <item name="android:paddingLeft">@dimen/dp_16</item>
+        <item name="android:paddingRight">@dimen/dp_16</item>
+        <item name="android:paddingTop">@dimen/dp_10</item>
+        <item name="android:paddingBottom">@dimen/dp_10</item>
+        <item name="android:background">@drawable/common_button_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">@color/colorLight</item>
+    </style>
+
+    <style name="common_progressbar">
+        <item name="android:layout_width">@dimen/dp_24</item>
+        <item name="android:layout_height">@dimen/dp_24</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDrawable">@drawable/common_refresh_progress</item>
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="common_dialog" parent="android:style/Theme.Dialog">
+        <!--内容背景 -->
+        <item name="android:background">@color/dialogBackground</item>
+        <!--窗口背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="common_togglebutton">
+        <item name="android:layout_width">@dimen/dp_48</item>
+        <item name="android:layout_height">@dimen/dp_24</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--  attrs -->
+    <declare-styleable name="SwipeMenuLayout">
+        <!-- 菜单位置 -->
+        <attr name="location">
+            <enum name="all" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <!-- 触发自动打开菜单的比例阀值 -->
+        <attr name="autoOpenPercent" format="float" />
+        <!-- 滑动动画持续时间 -->
+        <attr name="scrollerDuration" format="integer" />
+        <!-- 滑动动画指示器 -->
+        <attr name="scrollerInterpolator" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CountdownView">
+        <!-- 圆角矩形弧度 -->
+        <attr name="cvRadius" format="dimension" />
+        <!-- 圆角矩形内边距 -->
+        <attr name="cvPadding" format="dimension" />
+        <!-- 文字大小 -->
+        <attr name="cvTextSize" format="dimension" />
+        <!-- 文字颜色 -->
+        <attr name="cvTextColor" format="reference|color" />
+        <!-- 背景颜色 -->
+        <attr name="cvBackground" format="reference|color" />
+        <!-- 间隔距离 -->
+        <attr name="cvSpaceWidth" format="dimension" />
+        <!-- 间隔文字颜色 -->
+        <attr name="cvSpaceTextColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="SlideView">
+        <!-- 引导小点位置 -->
+        <attr name="svDotsPosition">
+            <!-- 底部居中 -->
+            <enum name="buttomCenter" value="0" />
+            <!-- 底部居左 -->
+            <enum name="buttomLeft" value="1" />
+            <!-- 底部居右 -->
+            <enum name="buttomRight" value="2" />
+        </attr>
+        <!-- 引导小点图片 -->
+        <attr name="svDotsImageResource" format="reference|integer" />
+        <!-- 两个引导小点的间距 -->
+        <attr name="svDotsSpacing" format="dimension" />
+        <!-- 引导小点的透明度 -->
+        <attr name="svDotsAlpha" format="float" />
+        <!-- 是否自动轮播 -->
+        <attr name="svIsAutoShift" format="boolean" />
+        <!-- 自动轮播的时间间隔 -->
+        <attr name="svIntervalTime" format="integer" />
+        <!-- View宽高比,0表示均参照父类 -->
+        <attr name="svAspectRatio" format="float" />
+        <!-- 自动轮播的切换时间（控制速度） -->
+        <attr name="transfromDuration" format="integer" />
+        <!-- 是否实现泳道效果 -->
+        <attr name="isLane" format="boolean" />
+        <attr name="laneMarginLeft" format="dimension" />
+        <attr name="laneMarginRight" format="dimension" />
+        <attr name="lanePageMargin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TabPagerView">
+        <!-- 选项卡背景 -->
+        <attr name="tpvTabBackground" format="reference|color" />
+        <!-- 选项卡文字未选中颜色 -->
+        <attr name="tpvTabTextNormalColor" format="reference|color" />
+        <!-- 选项卡文字选中颜色 -->
+        <attr name="tpvTabTextSelectColor" format="reference|color" />
+        <!-- 选项卡文字大小 -->
+        <attr name="tpvTabTextSize" format="dimension" />
+        <!-- 选项卡文字上下内边距 -->
+        <attr name="tpvTabTextPadding" format="dimension" />
+        <!-- 选项卡子项宽度 -->
+        <attr name="tpvTabChildWidth" format="dimension" />
+        <!-- 选项卡游标宽度与选项卡子项宽度比例  -->
+        <attr name="tpvAspectRatio" format="float" />
+        <!-- 选项卡间是否有分割线  -->
+        <attr name="hasDivider" format="boolean" />
+        <!-- 是否有提示小圆点  -->
+        <attr name="hasPoint" format="boolean" />
+        <!-- 小圆点样式资源 -->
+        <attr name="pointResourse" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="TagsLayout">
+        <!-- 标签文字大小 -->
+        <attr name="tagSize" format="dimension" />
+        <!-- 标签文字颜色 -->
+        <attr name="tagColor" format="reference|color" />
+        <!-- 标签文字背景 -->
+        <attr name="tagBackground" format="reference|color" />
+        <!-- 标签文字垂直内边距 -->
+        <attr name="tagVerticalPadding" format="dimension" />
+        <!-- 标签文字水平内边距 -->
+        <attr name="tagHorizontalPadding" format="dimension" />
+        <!-- 垂直间距 -->
+        <attr name="verticalSpacing" format="dimension" />
+        <!-- 水平间距 -->
+        <attr name="horizontalSpacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ToggleButton">
+        <!-- 开启颜色 -->
+        <attr name="tbOnColor" format="reference|color" />
+        <!-- 关闭颜色|边框颜色 -->
+        <attr name="tbOffBorderColor" format="reference|color" />
+        <!-- 灰色带颜色 -->
+        <attr name="tbOffColor" format="reference|color" />
+        <!-- 手柄颜色 -->
+        <attr name="tbSpotColor" format="reference|color" />
+        <!-- 边框大小 -->
+        <attr name="tbBorderWidth" format="dimension" />
+        <!-- 是否使用动画 -->
+        <attr name="tbAnimate" format="reference|boolean" />
+        <!-- 是否默认处于打开状态 -->
+        <attr name="tbAsDefaultOn" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PasswordView">
+        <!-- 密码长度 -->
+        <attr name="count" format="integer" />
+        <!-- 边框颜色 -->
+        <attr name="border_color" format="color" />
+        <!-- 掩盖圆点颜色 -->
+        <attr name="dot_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="WheelView">
+        <!-- 控件显示的总行数 -->
+        <attr name="showCount" format="integer" />
+        <!-- 普通行的文字颜色 -->
+        <attr name="normalTextColor" format="color" />
+        <!-- 普通行的文字大小 -->
+        <attr name="normalTextSize" format="dimension" />
+        <!-- 选中行的文字颜色 -->
+        <attr name="selectedTextColor" format="color" />
+        <!-- 选中行的文字大小 -->
+        <attr name="selectedTextSize" format="dimension" />
+        <!-- 行垂直间距 -->
+        <attr name="verticalPadding" format="dimension" />
+        <!-- 行水平间距 -->
+        <attr name="horizontalPadding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="StateButton">
+
+        <!--text color-->
+        <attr name="unpressedTextColor" format="color|reference" />
+        <attr name="pressedTextColor" format="color|reference" />
+        <attr name="unableTextColor" format="color|reference" />
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference" />
+        <attr name="strokeDashGap" format="dimension|reference" />
+        <attr name="normalStrokeWidth" format="dimension|reference" />
+        <attr name="pressedStrokeWidth" format="dimension|reference" />
+        <attr name="unableStrokeWidth" format="dimension|reference" />
+        <attr name="normalStrokeColor" format="color|reference" />
+        <attr name="pressedStrokeColor" format="color|reference" />
+        <attr name="unableStrokeColor" format="color|reference" />
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference" />
+        <attr name="pressedBackgroundColor" format="color|reference" />
+        <attr name="unableBackgroundColor" format="color|reference" />
+
+        <!--background radius-->
+        <attr name="radius" format="dimension|reference" />
+        <attr name="round" format="boolean|reference" />
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference" />
+
+    </declare-styleable>
+
+    <!-- ids -->
+    <item name="viewpager" type="id" />
+    <item name="slidepager" type="id" />
+    <item name="glide_tag" type="id" />
+
+</resources>

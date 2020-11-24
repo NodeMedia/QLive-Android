@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Airship</string>
+
+    <string name="imgsel_maxnum">最多选择%1$d张图片</string>
+    <string name="imgsel_confirm">确定(%1$d/%2$d)</string>
+
+    <string name="refresh_header_hint_normal">下拉刷新</string>
+    <string name="refresh_header_hint_ready">释放刷新</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="refreshing">刷新中…</string>
+    <string name="refresh_footer_hint_normal">上拉更多</string>
+    <string name="refresh_footer_hint_ready">释放加载</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="loading">加载中…</string>
+
+</resources>

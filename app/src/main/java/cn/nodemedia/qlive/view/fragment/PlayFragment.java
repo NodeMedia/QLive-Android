@@ -9,15 +9,12 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.SwitchPreference;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
-import android.widget.Toast;
 
 import cn.nodemedia.qlive.R;
 import cn.nodemedia.qlive.view.PlayActivity;
 import xyz.tanwb.airship.utils.Log;
-
-import static android.content.Context.MODE_WORLD_READABLE;
 
 public class PlayFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 

@@ -1,20 +1,21 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "cn.nodemedia.qlive"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
 
-        minSdkVersion 16
-        targetSdkVersion 28
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
 
-        versionCode 130
-        versionName "1.3.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -22,6 +23,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    // Java 的版本配置
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.targetCompatibility
     }
 
     repositories {
@@ -37,6 +44,7 @@ android {
             jni.srcDirs = []
         }
     }
+
     packagingOptions {
 //        exclude 'lib/x86/libNodeMediaClient.so'
 //        exclude 'lib/arm64-v8a/libNodeMediaClient.so'
@@ -47,20 +55,25 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:support-v13:28.0.0"
+    implementation project(path: ':library')
+    // implementation(name: 'airship', ext: 'aar')
+
     implementation "com.android.support:appcompat-v7:28.0.0"
-    implementation "com.android.support:design:28.0.0"
-    implementation "com.android.support:recyclerview-v7:28.0.0"
-    implementation "com.android.support:cardview-v7:28.0.0"
-    implementation "com.android.support:support-vector-drawable:28.0.0"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation(name: 'airship', ext: 'aar')
-    implementation 'com.github.nodemedia:nodemediaclient-android:2.9.1'
+
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
     // View 注解 http://jakewharton.github.io/butterknife/
-    implementation 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'com.github.nodemedia:nodemediaclient-android:2.9.1'
     implementation 'com.trello:rxlifecycle:0.6.1'
     implementation 'com.trello:rxlifecycle-components:0.6.1'
     implementation 'com.anthonycr.grant:permissions:1.1.2'
-    testImplementation 'junit:junit:4.12'
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xyz.tanwb.airship.view.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_rect_match">
+
+    <ImageView
+        android:id="@+id/imgsel_image"
+        style="@style/common_imageview"
+        android:layout_centerInParent="true"
+        android:src="@drawable/imgsel_camera" />
+
+    <TextView
+        style="@style/common_textview"
+        android:layout_below="@+id/imgsel_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="拍照"
+        android:textColor="@color/colorHint"
+        android:textSize="@dimen/sp_14" />
+
+</xyz.tanwb.airship.view.widget.SquareLayout>

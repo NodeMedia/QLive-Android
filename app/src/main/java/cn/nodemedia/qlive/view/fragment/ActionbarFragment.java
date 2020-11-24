@@ -3,7 +3,7 @@ package cn.nodemedia.qlive.view.fragment;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,7 +16,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import cn.nodemedia.qlive.R;
-import xyz.tanwb.airship.bean.ImagePath;
 import xyz.tanwb.airship.view.BaseFragment;
 import xyz.tanwb.airship.view.BasePresenter;
 

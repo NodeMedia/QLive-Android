@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/loading_empty"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_36"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/loading_empty"
+        android:text="@string/loading"
+        android:textSize="@dimen/sp_14" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_6"
+        android:layout_toLeftOf="@id/loading_empty"
+        android:padding="@dimen/dp_6">
+
+        <ImageView
+            android:id="@+id/loading_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/refresh_arrow"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/loading_progressbar"
+            style="@style/common_progressbar"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/loading_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/refresh_succeed"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

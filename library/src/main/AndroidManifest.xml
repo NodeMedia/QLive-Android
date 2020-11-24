@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.tanwb.airship">
+
+    <!--允许监听开机广播-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--允许程序使用网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序访问WiFi网络状态信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序访问GSM网络状态状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序改变WiFi网络连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--允许程序改变GSM网络连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--允许程序读取或写入系统设置-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--允许程序访问使用照相设备 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--允许程序录制音频-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--允许程序使用闪光灯-->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!--允许程序振动-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--允许程序写入外部存储-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序读取外部存储-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--允许程序显示悬浮窗-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!--子特性:申明程序需要用到camera特性-->
+    <uses-feature android:name="android.hardware.camera" />
+    <!--子特性:允许程序使用设备摄像头的自动对焦功能-->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <!--Android7.0 调用系统相机拍照、裁剪照片替代方案-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+</manifest>

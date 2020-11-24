@@ -5,9 +5,8 @@ import android.animation.ObjectAnimator;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
@@ -17,7 +16,6 @@ import android.widget.TextView;
 import cn.nodemedia.NodeCameraView;
 import cn.nodemedia.qlive.R;
 import cn.nodemedia.qlive.contract.PushContract;
-import xyz.tanwb.airship.utils.StatusBarUtils;
 import xyz.tanwb.airship.view.BaseActivity;
 
 public class PushActivity extends BaseActivity<PushContract.Presenter> implements PushContract.View, View.OnClickListener {
