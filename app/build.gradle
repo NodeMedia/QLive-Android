@@ -38,13 +38,6 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDir 'libs'
-            jni.srcDirs = []
-        }
-    }
-
     packagingOptions {
 //        exclude 'lib/x86/libNodeMediaClient.so'
 //        exclude 'lib/arm64-v8a/libNodeMediaClient.so'
@@ -56,7 +49,6 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(path: ':library')
-    // implementation(name: 'airship', ext: 'aar')
 
     implementation "com.android.support:appcompat-v7:28.0.0"
 
@@ -72,7 +64,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
-    implementation 'com.github.nodemedia:nodemediaclient-android:2.9.1'
+    implementation 'com.github.nodemedia:nodemediaclient-android:2.9.7'
     implementation 'com.trello:rxlifecycle:0.6.1'
     implementation 'com.trello:rxlifecycle-components:0.6.1'
     implementation 'com.anthonycr.grant:permissions:1.1.2'
